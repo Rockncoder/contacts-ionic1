@@ -1,0 +1,36 @@
+<ion-view view-title="Add Contact">
+    <ion-content class="padding">
+        <ion-list>
+            <form novalidate role="form" name="form" class="form-horizontal" ng-submit="add()">
+
+                <label class="item item-input">
+                    <input type="text" placeholder="First Name" ng-model="currentContact.firstName" id="firstName"
+                           required>
+                </label>
+
+                <label class="item item-input">
+                    <input type="text" placeholder="Last Name" ng-model="currentContact.lastName" id="lastName"
+                           required>
+                </label>
+
+                <label class="item item-input">
+                    <input type="email" placeholder="Email" ng-model="currentContact.eMail" id="email" required>
+                </label>
+
+                <label class="item item-input">
+                    <input type="text" placeholder="City" ng-model="currentContact.City" id="city">
+                </label>
+
+                <label class="item item-input">
+                    <input type="text" placeholder="State" ng-model="currentContact.State" id="state">
+                </label>
+                <button type="submit" class="button button-block button-positive"
+                        ng-disabled="form.$invalid"
+                        ng-click="add()">Add
+
+                </button>
+                <button type="button" class="button button-block button-positive" ng-click="clear()">Clear</button>
+            </form>
+        </ion-list>
+    </ion-content>
+</ion-view>
